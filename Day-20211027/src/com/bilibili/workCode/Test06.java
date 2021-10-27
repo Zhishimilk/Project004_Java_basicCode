@@ -14,7 +14,7 @@ public class Test06 {
 //        注：必要时候定义方法完成需求
 
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[6];
+        int[] arr = new int[7];
         for (int i = 0; i < arr.length; i++) {
             System.out.print("请录入第 "+(i+1)+" 个整数:");
             arr[i] = sc.nextInt();
@@ -46,7 +46,7 @@ public class Test06 {
             arr[i] = arr[i] ^ arr[i - 2];
             arr[i - 2] = arr[i] ^ arr[i - 2];
             arr[i] = arr[i] ^ arr[i - 2];
-            if(i+2 > arr.length){
+            if(i+2 >= arr.length){
                 arr[i] = arr[i] ^ arr[1];
                 arr[1] = arr[i] ^ arr[1];
                 arr[i] = arr[i] ^ arr[1];

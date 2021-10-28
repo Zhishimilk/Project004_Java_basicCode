@@ -1,5 +1,7 @@
 package com.bilibili.workCode;
 
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Test06 {
@@ -40,9 +42,9 @@ public class Test06 {
         System.out.println("反转------------------------");
         showArr(arr);
 
+        Random rd = new Random();
 
         for (int i = 3; i < arr.length; i+=2) {
-
             arr[i] = arr[i] ^ arr[i - 2];
             arr[i - 2] = arr[i] ^ arr[i - 2];
             arr[i] = arr[i] ^ arr[i - 2];

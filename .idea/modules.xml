@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlgorithmPractice/AlgorithmPractice.iml" filepath="$PROJECT_DIR$/AlgorithmPractice/AlgorithmPractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day-20211022/Day-20211022.iml" filepath="$PROJECT_DIR$/Day-20211022/Day-20211022.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day-20211024/Day-20211024.iml" filepath="$PROJECT_DIR$/Day-20211024/Day-20211024.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day-20211025/Day-20211025.iml" filepath="$PROJECT_DIR$/Day-20211025/Day-20211025.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day-20211027/Day-20211027.iml" filepath="$PROJECT_DIR$/Day-20211027/Day-20211027.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day-20211028/Day-20211028.iml" filepath="$PROJECT_DIR$/Day-20211028/Day-20211028.iml" />
     </modules>
   </component>
 </project>

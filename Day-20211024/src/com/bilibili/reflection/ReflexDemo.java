@@ -87,18 +87,28 @@ public class ReflexDemo {
 //        Person person = new Person();
 
 
+        //加载类加载器
         ClassLoader cld = ReflexDemo.class.getClassLoader();
+        //获取数据输入流
         InputStream ras = cld.getResourceAsStream("pro.properties");
+        //创建与输入输出流相关的Map子类Properties的对象集合
         Properties pro = new Properties();
+        //从输入字节流中读取属性列表
         pro.load(ras);
 
+        //获取对应键值对 key的value
         String className = pro.getProperty("className");
         String methodName = pro.getProperty("methodName");
 
+        //获取对应的Class类对象
         Class<?> aClass = Class.forName(className);
+        //使用类对象的构造方法创建该类的实例
         Object o = aClass.getDeclaredConstructor().newInstance();
+        //使用类对象获取成员方法的对象
         Method method = aClass.getMethod(methodName);
+        //使用method对象的invoke方法并传入具体的对象来执行方法
         method.invoke(o);
+        //关闭使用的系统资源
         ras.close();
     }
 }

@@ -88,6 +88,7 @@ public class Demo01 {
             cld.setTime(date);
             week = cld.get(Calendar.DAY_OF_WEEK);
         } catch (ParseException e) {
+            System.out.println("你录入的数据有误!");
             e.printStackTrace();
         }
 
@@ -106,6 +107,7 @@ public class Demo01 {
             cld.setTime(date);
             timeOfDay = cld.get(Calendar.HOUR_OF_DAY);
         } catch (ParseException e) {
+            System.out.println("你录入的数据有误!");
             e.printStackTrace();
         }
 

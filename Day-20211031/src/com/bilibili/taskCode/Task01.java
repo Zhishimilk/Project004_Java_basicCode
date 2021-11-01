@@ -36,15 +36,13 @@ public class Task01 {
             return false;
         }
 
-        boolean flag = true;
-
         for (int i = 0; i < idCN.length() - 1; i++) {
             char c = idCN.charAt(i);
             if(c < '0' || c > '9'){
-                flag = false;
+                return false;
             }
         }
 
-        return flag;
+        return true;
     }
 }

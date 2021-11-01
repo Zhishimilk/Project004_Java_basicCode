@@ -26,8 +26,20 @@ public class Task03 {
             if(arr[i] >= 'A' && arr[i] <= 'Z'){
                 arr[i] = (char)(arr[i] + 32);
             }
+        }
+
+        if(arr[0] != arr[arr.length-1]){
+            char temp = arr[0];
+            arr[0] = arr[arr.length-1];
+            arr[arr.length-1] = temp;
+        }
+
+        for (int i = 0; i < arr.length; i+=2) {
+            arr[i] = '~';
+        }
+
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
         }
-        System.out.println();
     }
 }

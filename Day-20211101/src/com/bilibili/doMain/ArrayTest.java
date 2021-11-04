@@ -7,9 +7,13 @@ public class ArrayTest {
 
     public  void reverse(ArrayList list){
         for (int start=0, end=list.size()-1; start<end; start++, end--){
-            Object temp = list.get(start);
-            list.set(start, list.get(end));
-            list.set(end, temp);
+//            Object temp = list.get(start);
+//            list.set(start, list.get(end));
+//            list.set(end, temp);
+
+            Object o = list.set(start, list.get(end));
+            list.set(end, o);
+
         }
     }
 

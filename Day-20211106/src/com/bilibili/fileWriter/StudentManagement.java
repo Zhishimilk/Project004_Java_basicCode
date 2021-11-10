@@ -37,22 +37,18 @@ public class StudentManagement {
                 case "1" -> {
                     System.out.println("添加学生");
                     addStudent(students);
-                    break;
                 }
                 case "2" -> {
                     System.out.println("修改学生");
                     updateStudent(students);
-                    break;
                 }
                 case "3" -> {
                     System.out.println("删除学生");
                     deleteStudent(students);
-                    break;
                 }
                 case "4" -> {
                     System.out.println("查看所有学生");
                     findAllStudent(students);
-                    break;
                 }
                 case "5" -> {
                     storage(students);

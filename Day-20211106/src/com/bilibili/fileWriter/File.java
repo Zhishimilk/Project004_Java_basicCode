@@ -19,9 +19,19 @@ public class File {
 //            System.out.print((char)c);
 //        }
 //        fr.close();
-        BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\zhish\\Desktop\\temp.txt"));
-        bw.write("abc");
+//        BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\zhish\\Desktop\\temp.txt"));
+//        bw.write("abc");
+//
+//        bw.close();
+        String s1 = "abc";
+        String s2 = "ab";
+        String s3 = "c";
+        String s4 = s2 + s3;
+        String s5 = "ab"+"c";
 
-        bw.close();
+        System.out.println(s1 == "abc");
+        System.out.println(s1 == s4);
+        System.out.println(s1 == s2 + s3);
+        System.out.println(s1 == s5);
     }
 }

@@ -18,7 +18,7 @@ public class StudentManagement {
          */
 
         ArrayList<Student> students = new ArrayList<>();
-        loading(students);
+        loading(students);  //加载学生信息
 
         while(true){
             System.out.println("-------欢迎来到学生管理系统-------");
@@ -51,7 +51,7 @@ public class StudentManagement {
                     findAllStudent(students);
                 }
                 case "5" -> {
-                    storage(students);
+                    storage(students);  //存储学生信息
                     System.out.println("谢谢使用");
                     long l1 = System.currentTimeMillis();
                     System.out.println("本次程序共运行: " + (l1 - l) / 1000 + "s");

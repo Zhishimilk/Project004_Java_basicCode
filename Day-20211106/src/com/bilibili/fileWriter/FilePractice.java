@@ -1,6 +1,7 @@
 package com.bilibili.fileWriter;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
 
 public class FilePractice {
@@ -8,7 +9,6 @@ public class FilePractice {
 //        FileWriter fw = new FileWriter("C:\\Users\\zhish\\Desktop\\a.txt", true);
 //        fw.write("Hello World!");
 //        fw.close();
-
 //        FileReader fr = new FileReader("C:\\Users\\zhish\\Desktop\\a.txt");
 //        int c;
 //        while((c = fr.read()) != -1){
@@ -25,7 +25,18 @@ public class FilePractice {
     }
 
     private static void showAllFile(File f1) {
-        File[] files = f1.listFiles();
+
+        //普通写法:
+//        File[] files = f1.listFiles(new FileFilter() {
+//            @Override
+//            public boolean accept(File pathname) {
+//                return pathname.isDirectory() || pathname.getName().toLowerCase().endsWith(".pdf");
+//            }
+//        });
+
+        //lambda表达式写法:
+        File[] files = f1.listFiles((pathname) -> pathname.isDirectory() || pathname.getName().toLowerCase().endsWith(".pdf"));
+
         for (int i = 0; i < files.length; i++) {
             System.out.println(files[i]);
             if(files[i].isDirectory()){
@@ -33,5 +44,4 @@ public class FilePractice {
             }
         }
     }
-
 }

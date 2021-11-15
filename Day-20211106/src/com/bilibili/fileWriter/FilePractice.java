@@ -26,7 +26,7 @@ public class FilePractice {
 
     private static void showAllFile(File f1) {
 
-        //普通写法:
+        //实现 FileFilter 普通写法:
 //        File[] files = f1.listFiles(new FileFilter() {
 //            @Override
 //            public boolean accept(File pathname) {
@@ -34,7 +34,7 @@ public class FilePractice {
 //            }
 //        });
 
-        //lambda表达式写法:
+        //实现 FileFilter lambda表达式写法:
         File[] files = f1.listFiles((pathname) -> pathname.isDirectory() || pathname.getName().toLowerCase().endsWith(".pdf"));
 
         for (int i = 0; i < files.length; i++) {

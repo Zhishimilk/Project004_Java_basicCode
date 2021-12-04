@@ -3,12 +3,13 @@ package com.bilibili.fileWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 public class CopyTask {
     public static void main(String[] args) throws IOException {
         //读取与写入
         FileInputStream fis = new FileInputStream("C:\\Users\\zhish\\Desktop\\temp\\Arista.jpg");
-        FileOutputStream fos = new FileOutputStream("C:\\Users\\zhish\\Desktop\\temp\\YoumuKonpaku.rar", true);
+        FileOutputStream fos = new FileOutputStream("C:\\Users\\zhish\\Desktop\\temp\\Arista(1).jpg", true);
 
         byte[] bt = new byte[1024];
         int len = 0;

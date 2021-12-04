@@ -10,13 +10,14 @@ public class Test01 {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Calendar c = Calendar.getInstance();
-        try {
-            Date d = sdf.parse("2016-06-05");
-            System.out.println(d);
-            c.setTime(d);
-            System.out.println(c.get(Calendar.DAY_OF_WEEK));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        System.out.println(c.get(Calendar.DAY_OF_WEEK));
+//        try {
+//            Date d = sdf.parse("2016-06-05");
+//            System.out.println(d);
+//            c.setTime(d);
+//            System.out.println(c.get(Calendar.DAY_OF_WEEK));
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
     }
 }

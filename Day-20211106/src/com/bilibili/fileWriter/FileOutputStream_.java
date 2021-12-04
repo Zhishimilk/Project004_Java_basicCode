@@ -9,19 +9,25 @@ public class FileOutputStream_ {
     public static void main(String[] args) throws IOException {
 
 //        FileOutputStream fos = new FileOutputStream("C:\\Users\\zhish\\Desktop\\temp\\temp.txt", true);
-        FileOutputStream fos = new FileOutputStream(new File("C:\\Users\\zhish\\Desktop\\temp\\temp.txt"), true);
+//        FileOutputStream fos = new FileOutputStream("C:\\Users\\zhish\\Desktop\\temp\\temp.txt", true);
+        FileOutputStream fos = new FileOutputStream(new File("C:\\Users\\zhish\\Desktop\\temp\\temp.txt"));
 //        void write(int b)
         fos.write(98);
+
+//         \r\n 换行(windows)
+        String property = System.getProperty("line.separator");
 
 //        void write(byte[] b)
         byte[] bt1 = {22, 33, 66, 77, 88};
         fos.write(bt1);
+        fos.write(property.getBytes(StandardCharsets.UTF_8));
 
 //        void write(byte[] b, int off, int len)
         fos.write(bt1, 2, 3);
 
-//         \r\n 换行(windows)
-        fos.write("\r\n".getBytes(StandardCharsets.UTF_8));
+        fos.write(property.getBytes(StandardCharsets.UTF_8));
+//        fos.write("\r\n".getBytes(StandardCharsets.UTF_8));
+
 //        byte[] getBytes()
         byte[] bt2 = "你好, 世界".getBytes(StandardCharsets.UTF_8);
         fos.write(bt2);

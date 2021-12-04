@@ -20,7 +20,7 @@ public class FilePractice {
 //        bw.write("abc");
 //        bw.close();
 
-        File f1 = new File("G:\\DownLoad\\Web");
+        File f1 = new File("G:\\ACG\\Music");
         showAllFile(f1);
     }
 
@@ -35,7 +35,8 @@ public class FilePractice {
 //        });
 
         //实现 FileFilter lambda表达式写法:
-        File[] files = f1.listFiles((pathname) -> pathname.isDirectory() || pathname.getName().toLowerCase().endsWith(".pdf"));
+//        File[] files = f1.listFiles((pathname) -> pathname.isDirectory() || pathname.getName().toLowerCase().endsWith(".pdf"));
+        File[] files = f1.listFiles();
 
         for (int i = 0; i < files.length; i++) {
             System.out.println(files[i]);

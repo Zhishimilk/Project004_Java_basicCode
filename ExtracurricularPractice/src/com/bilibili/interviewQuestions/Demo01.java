@@ -151,7 +151,7 @@ public class Demo01 {
             int end = time(dur[1]);
 
             //判断当天是休息日还是工作日并计算开始到结束的总支出
-            if (week > 5) {
+            if (week == 7 || week == 1) {
                 while (star++ < end) {
                     sumPrice += restDayPrice[star] * fieldNum;
                 }
